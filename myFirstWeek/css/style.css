@@ -1,0 +1,39 @@
+/* Importing the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+/* Universal selector to apply styles to all elements */
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    text-decoration: none; /* Removes underlines from links */
+    border: none; /* Removes default borders */
+    outline: none; /* Removes default outlines */
+    font-family: "Poppins", sans-serif; /* Applying the Poppins font to all elements on the webpage */
+
+
+}
+
+/* Defining CSS variables for consistent theming throughout the stylesheet */
+:root{
+
+    --bg-color:   #ffffff; /* Defining a background color variable */
+    --second-bg-color: #f0f0f0; /* Defining a secondary background color variable */
+    --main-color: #007bff; /* Defining a main color variable */
+    --white-color: #fff; /* Defining a text color variable */
+    --disabled-color: #999; /* Defining a disabled state color variable */
+}
+
+#myName{
+    display: inline-block;
+    vertical-align: middle;
+    color : #007bff;
+    padding: 40px;
+}
+
+.menu{
+    display: inline;
+    color: #51e14a;
+    padding: 20px;
+    margin-right: 10px
+}
