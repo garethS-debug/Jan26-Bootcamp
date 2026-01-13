@@ -1,38 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <!DOCTYPE html>
+    <html lang="en">
 
-<!-- Header section of the webpage -->
-<header>
-<h1>Gareth Swarte</h1>      
-<a href="#" class="logo">MyPortfolio</a>
 
-<nav>
-        <!-- Navigation links -->
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">Projects</a>
-        <a href="#">Portfolio</a>
-        <a href="./about.html">About</a>
-        <a href="#">Contact</a>
-</nav>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>About Page</title>
+    </head>
 
-</header>
 
- <img src="./images/profilePhoto.jpg" alt="Gareth Swarte Profile Photo" width="200">
-    
-    <div>
-        <h2>About Me</h2>
-        <p>I am a passionate <a href="https://www.google.com">developer</a> with expertise in Unity and a strong background in the automotive industry. I enjoy creating innovative solutions and collaborating on exciting projects.</p>
+    <header>
+    <!-- - **Header**: Include your name and a navigation bar 
+    (e.g., "About", "Projects", "Contact"). -->
+    <nav >
+            <img src="./logo/logo_500px.svg" alt="Gareth Swarte Logo" class="logo-img">
+            <!-- Navigation links -->
+            <a class="menu" href="#">Home</a>
+            <a class="menu" href="#">Services</a>
+            <a class="menu" href="#">Projects</a>
+            <a class="menu" href="#">Portfolio</a>
+            <a class="menu" href="./about.html">About</a>
+            <a class="menu" href="#">Contact</a>
+    </nav>
+    </header>
+
+
+
+    <body>
+
+    <main>
+    <div class="split-text-container">
+        <span class="text-part left">About</span>
+        <span class="text-part right">me</span>
     </div>
-    <div>
 
-<body>
+        <section id="about" class="about">
+            <p class="about-titles">Coder/Developer</p>
+            <!-- profile image + bio -->
+             <p class="about-bio"> Hello! I'm Gareth Swarte, a passionate coder and developer with a knack for creating innovative solutions. With a background in computer science and years of experience in web development, I specialize in building responsive and user-friendly applications. My journey in coding began with a curiosity for how things work, leading me to explore various programming languages and frameworks. I thrive on challenges and enjoy collaborating with teams to bring ideas to life. When I'm not coding, you can find me exploring the latest tech trends or contributing to open-source projects. Let's connect and create something amazing together!</p>
+            <!-- Main content section -->
+        <img class="profile-photo" src="./img/profilePhoto.jpg" alt="Gareth Swarte Profile Photo" width="200">
+            
 
-    
-</body>
-</html>
+        </section>
+
+        
+        <section id="projects" class="projects">
+            <!-- link to projects button -->
+        
+     <button class="btn liquid">
+    <span>See Projects</span>
+    </button>
+
+        </section>
+
+        <section id="contact" class="contact">
+            <!-- contact form / mailto / tel -->
+        </section>
+    </main>
+
+
+
+    <!-- ...existing code... -->
+    </body>
+    </html>

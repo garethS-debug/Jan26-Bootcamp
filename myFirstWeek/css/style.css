@@ -10,30 +10,181 @@
     border: none; /* Removes default borders */
     outline: none; /* Removes default outlines */
     font-family: "Poppins", sans-serif; /* Applying the Poppins font to all elements on the webpage */
-
-
+    
 }
 
 /* Defining CSS variables for consistent theming throughout the stylesheet */
 :root{
 
-    --bg-color:   #ffffff; /* Defining a background color variable */
+    --bg-color:   #5f5f5f; /* Defining a background color variable */
     --second-bg-color: #f0f0f0; /* Defining a secondary background color variable */
     --main-color: #007bff; /* Defining a main color variable */
     --white-color: #fff; /* Defining a text color variable */
     --disabled-color: #999; /* Defining a disabled state color variable */
+	 background-color: #f3f3f3;
+
+  --btn-bg: #ff0082;       /* bubble color */
+  --btn-text: #fff;        /* text color */
+  --btn-fill: #353535;     /* liquid fill color */
+
 }
 
-#myName{
-    display: inline-block;
-    vertical-align: middle;
+.headerName{
+    display: block;
+    margin: 0 auto;
     color : #007bff;
     padding: 40px;
+    text-align: center; 
+}
+
+header nav {
+    text-align: center;
 }
 
 .menu{
-    display: inline;
-    color: #51e14a;
+    display: inline-block;
+    Margin: 0 10px;
+    color: #181818;
     padding: 20px;
-    margin-right: 10px
+    margin-right: 10px;
+}
+.logo-img {
+    display: block;
+    width: 160px;       /* desired logo width — adjust as needed */
+    max-width: 100%;    /* keeps it responsive on small screens */
+    height: auto;
+    padding: 12px 20px; /* control padding around the logo */
+    margin: 0 auto;     /* center horizontally */
+}
+
+.aboutMe{
+    text-align: center;
+    padding: 50px;
+    color : #333333;
+}
+
+/*-------------------------------------------------*/
+/* Buttons */
+
+.btn {
+  position: relative;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(73, 73, 73);
+  background: none;
+  border: 2px solid none;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+    display: block;
+  margin: 40px auto; /* centers horizontally  */
+}
+
+.liquid {
+  background: linear-gradient(#353535 0 0) no-repeat calc(200% - var(--p, 0%))
+    100% / 200% var(--p, 0.2em);
+  transition: 0.3s var(--t, 0s),
+    background-position 0.3s calc(0.3s - var(--t, 0s));
+}
+
+.liquid:hover {
+  --p: 100%;
+  --t: 0.3s;
+  color: #fff;
+}
+
+
+/* Bubble Button effect */
+
+
+
+/*-------------------------------------------------*/
+
+
+
+
+/*
+/* Styling for the About section */
+
+#about p{
+    margin-top: 0;        /* keep the subheading snug to the split text */
+}
+.about-titles  {
+        padding-top: 0;
+        color: rgb(68, 68, 68);
+        padding-left: 2px; /* nudge the titles away from the page edge */
+}
+
+.split-text-container {
+    padding-top: 50px;
+    display: flex;
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #2b2b2b;
+    overflow: hidden;
+    margin-bottom: 0px;
+    line-height: 1;       /* reduces the vertical space around the split text */
+}
+
+.text-part {
+    display: inline-block;
+    position: relative;
+    transform: translateX(0);
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    
+}
+
+.text-part.left {
+    transform: translateX(-200%);
+    animation-name: slide-in-left;
+}
+
+.text-part.right {
+    transform: translateX(200%);
+    animation-name: slide-in-right;
+}
+
+.profile-photo {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%; /* this makees the image a cricle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* adds a shadow */
+}
+
+  .about-bio {
+    padding-top: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #444444;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+
+
+
+
+  
 }
