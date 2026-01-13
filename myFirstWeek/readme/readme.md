@@ -19,18 +19,25 @@ In this challenge, you will apply the skills you’ve learned—HTML, CSS, displ
 (DONE)
 
   - **Projects Section**: Showcase at least **two images** of imaginary projects you’ve worked on, with a brief description of each.
-
+(DONE)
   
-  - **Contact Section**: Include your contact details in a form format (name, email, message).
+  - **Contact Section**: Include your contact details in a form format (name, email, message). (DONE)
+
   - **Footer**: Add copyright information or any relevant details.
+  (DONE)
 
 ### 2. CSS Styling:
 
 - Link an external **CSS file** and use it to style the webpage.
+(DONE)
+
 - Style the following:
   - **Fonts**: Choose a suitable font for your webpage and apply it using `font-family`. Include font styling like `font-size`, `font-weight`, etc.
+
   - **Colors**: Define background colors, text colors, and hover effects using color values (hex, RGB, or named colors).
+
   - **Selectors**: Use **class** and **ID** selectors to style different parts of the page, along with element and universal selectors where necessary.
+
   - **Display Modes**: Use appropriate display modes (`block`, `inline`, `inline-block`, and `none`) to arrange the elements on your page, ensuring proper alignment and layout.
 
 ### 3. Hyperlinks and Contact Form:
@@ -78,7 +85,7 @@ In this challenge, you will apply the skills you’ve learned—HTML, CSS, displ
 ## Stretch Goals:
 
 - Use **CSS Flexbox** or **Grid** to better organize your layout.
-- Add hover effects to buttons and links.
+- Add hover effects to buttons and links. (DONE)
 - Create a sticky navigation bar.
 - Include additional projects or sections to enhance your portfolio.
 
