@@ -7,6 +7,26 @@
   font-style: normal;
 }
 
+/* Defining CSS variables for consistent theming throughout the stylesheet */
+:root{
+
+    --bg-color:   #5f5f5f; /* Defining a background color variable */
+    --second-bg-color: #f0f0f0; /* Defining a secondary background color variable */
+    --main-color: #007bff; /* Defining a main color variable */
+    --white-color: #fff; /* Defining a text color variable */
+    --disabled-color: #999; /* Defining a disabled state color variable */
+	 background-color: #f3f3f3;
+     --bg-gradient: linear-gradient(to bottom, #ffffff 0%, #cdcdcd 100%);
+
+  --btn-bg: #ff0082;       /* bubble color */
+  --btn-text: #fff;        /* text color */
+  --btn-fill: #353535;     /* liquid fill color */
+
+    --nav-bg: rgba(255,255,255,0.6); /* semi-transparent background for navigation */
+    --nav-text: #181818; /* default nav text color / / ... */
+}
+
+
 /* Universal selector to apply styles to all elements */
 *{ 
     margin: 0;
@@ -25,24 +45,35 @@
 }
 
 body{
-     background: linear-gradient(to bottom, #ffffff 0%, #cdcdcd 100%);
+    background: var(--bg-gradient);
+    color: var(--text, #222);
+    
 }
 
-/* Defining CSS variables for consistent theming throughout the stylesheet */
-:root{
-
-    --bg-color:   #5f5f5f; /* Defining a background color variable */
-    --second-bg-color: #f0f0f0; /* Defining a secondary background color variable */
-    --main-color: #007bff; /* Defining a main color variable */
-    --white-color: #fff; /* Defining a text color variable */
-    --disabled-color: #999; /* Defining a disabled state color variable */
-	 background-color: #f3f3f3;
-
-  --btn-bg: #ff0082;       /* bubble color */
-  --btn-text: #fff;        /* text color */
-  --btn-fill: #353535;     /* liquid fill color */
-
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
+.site-footer {
+  margin-top: auto;
+}
+
+
+
+/*---------------------Dark Mode------------------------*/
+
+/* Styling for dark mode */
+
+[data-theme="dark"]{
+  --bg-gradient: linear-gradient(to bottom, #212121 0%, #0d0d0d 100%);
+  --text: #e6eef6;
+    --nav-bg: rgba(216, 216, 216, 0.8);
+    --nav-text: #e6eef6; /* nav text for dark mode */
+}
+/*-------------------------------------------------*/
+
+
 
 .headerName{
     display: block;
@@ -54,12 +85,14 @@ body{
 
 header nav {
     text-align: center;
+      color: var(--nav-text);
+        transition: color .2s ease;
 }
 
 .menu{
     display: inline-block;
     Margin: 0 10px;
-    color: #181818;
+    color: var(--nav-text);
     padding: 20px;
     margin-right: 10px;
 }
@@ -110,6 +143,13 @@ header nav {
   color: #fff;
 }
 
+
+
+/* Toggle Button */
+
+
+
+/*
 
 /* FooterWavy Page effect */
 
@@ -379,6 +419,7 @@ body {
 #flip div div {
   background:#42c58a;
 }
+
 #flip div:first-child div {
   background:#4ec7f3;
 }
@@ -465,6 +506,59 @@ body {
   color: #000;
   border-radius: 999px;
   font-size: 0.9rem;
+}
+
+/* Toggle control  for dark mode */
+.toggle-control {
+  display: block;
+  position: relative;
+  padding-left: 100px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+  margin: 0;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  transform-origin: top right;
+  transform: scale(0.3); /* change 1.2 to desired scale */
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+.toggle-control input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.toggle-control input:checked ~ .control {
+  background-color: rgb(35, 35, 35);
+}
+.toggle-control input:checked ~ .control:after {
+  left: 55px;
+}
+.toggle-control .control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100px;
+  border-radius: 25px;
+  background-color: darkgray;
+  transition: background-color .15s ease-in;
+}
+.toggle-control .control:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background: white;
+  transition: left .15s ease-in;
 }
 
 /*-------------------------------------------------*/
