@@ -89,6 +89,8 @@ header nav {
         transition: color .2s ease;
 }
 
+
+
 .menu{
     display: inline-block;
     Margin: 0 10px;
@@ -96,6 +98,7 @@ header nav {
     padding: 20px;
     margin-right: 10px;
 }
+/*logo image styling */
 .logo-img {
     display: block;
     width: 160px;       /* desired logo width — adjust as needed */
@@ -103,6 +106,7 @@ header nav {
     height: auto;
     padding: 12px 20px; /* control padding around the logo */
     margin: 0 auto;     /* center horizontally */
+    transform: scale(0.75);
 }
 
 .aboutMe{
@@ -110,6 +114,76 @@ header nav {
     padding: 50px;
     color : #333333;
 }
+
+/*  Hero Section Styling  */
+
+.hero{
+    background:none;          /* full width background */
+    padding: 80px 74px;
+  /* left 50% red, right 50% transparent */
+
+}
+
+
+.hero__content {
+    color: #2c2c2c;
+    text-align: left;
+}
+
+.hero__inner{
+  max-width: 1200px;           /* keeps content “in” from the page edges */
+  margin: 0 auto;              /* centers the whole hero block */
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) 1fr; /* left can shrink */
+  gap: 48px;
+  align-items: center;
+}
+
+.hero__content{
+  justify-self: start;         /* pins the text to the left side of its column */
+}
+
+.hero__visual {
+  position: relative;
+  justify-self: end; /* keeps the visual on the right column */
+  align-self: center;
+}
+
+
+.hero__visual img{
+  position: relative; /* remove absolute positioning */
+  width: 100%;
+  height: auto;
+  max-width: 420px; /* constrain size so it scales down */
+  display: block;
+  margin: 0;
+}
+
+/* stack earlier and center the visual when space is tight */
+@media (max-width: 900px) {
+  .hero__inner{
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .hero__content {
+    justify-self: stretch;
+  }
+  .hero__visual {
+    justify-self: center;
+    width: 100%;
+  }
+  .hero__visual img {
+    max-width: 360px;
+    min-width: 0; /* allow natural shrink when stacked */
+    margin: 0 auto;
+    position: static;
+  }
+}
+
+
+
+/* ------------------------------------------------*/
+
 
 /*-------------------------------------------------*/
 /* Buttons */
