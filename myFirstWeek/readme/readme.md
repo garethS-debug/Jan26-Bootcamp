@@ -16,8 +16,11 @@ In this challenge, you will apply the skills you’ve learned—HTML, CSS, displ
   - **Header**: Include your name and a navigation bar (e.g., "About", "Projects", "Contact"). (DONE)
 
   - **About Section**: Add a picture of yourself and a short bio.
+(DONE)
 
   - **Projects Section**: Showcase at least **two images** of imaginary projects you’ve worked on, with a brief description of each.
+
+  
   - **Contact Section**: Include your contact details in a form format (name, email, message).
   - **Footer**: Add copyright information or any relevant details.
 
