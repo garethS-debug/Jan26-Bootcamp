@@ -24,6 +24,10 @@
 
     --nav-bg: rgba(255,255,255,0.6); /* semi-transparent background for navigation */
     --nav-text: #181818; /* default nav text color / / ... */
+    --contact-btn-bg: #2e2e2e; /* contact button background color */
+    --contact-btn-bg-hover: #b26df8; /* contact button background color on hover */
+    --contact-btn-text: #fff; /* contact button text color */
+    --contact-form-bg: #bcbcbc; /* contact form background color */
 }
 
 
@@ -70,6 +74,9 @@ main {
   --text: #e6eef6;
     --nav-bg: rgba(216, 216, 216, 0.8);
     --nav-text: #e6eef6; /* nav text for dark mode */
+     --contact-btn-bg: #c4c4c4; /* contact button background color */
+    --contact-btn-bg-hover: #ff84f3; /* contact button background color on hover */
+        --contact-btn-text: #2d2d2d; /* contact button text color */
 }
 /*-------------------------------------------------*/
 
@@ -100,6 +107,15 @@ header nav {
 }
 /*logo image styling */
 .logo-img {
+    display: block;
+    width: 160px;       /* desired logo width — adjust as needed */
+    max-width: 100%;    /* keeps it responsive on small screens */
+    height: auto;
+    padding: 12px 20px; /* control padding around the logo */
+    margin: 0 auto;     /* center horizontally */
+    transform: scale(0.75);
+}
+.logo-dark {
     display: block;
     width: 160px;       /* desired logo width — adjust as needed */
     max-width: 100%;    /* keeps it responsive on small screens */
@@ -254,7 +270,7 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 20px;
   flex-wrap: nowrap;
   padding: 2rem 1rem;
   box-sizing: border-box;
@@ -273,6 +289,7 @@ header nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  scale: 0.7;
 }
 
 .contact_picture img {
@@ -306,7 +323,7 @@ header nav {
 .email-input {
   border: none;
   outline: none;
-  background: #eee;
+  background: var(--contact-form-bg);
   padding: 20px;
   border-radius: 6px;
   width: 100%;
@@ -317,7 +334,7 @@ header nav {
   border: none;
   outline: none;
   resize: none;
-  background: #eee;
+  background: var(--contact-form-bg);
   padding: 20px;
   border-radius: 6px;
   width: 100%;
@@ -327,10 +344,10 @@ header nav {
 .submit {
   border: none;
   outline: none;
-  color: #fff;
+  color: var(--contact-btn-text);
   width: 100%;
   padding: 20px;
-  background: #8870FF;
+  background: var(--contact-btn-bg);
   font-size: 100%;
   font-weight: 600;
   border-radius: 6px;
@@ -339,7 +356,7 @@ header nav {
 
 .submit:hover {
   cursor: pointer;
-  background: #7F69EE;
+  background: var(--contact-btn-bg-hover);
   transform: translateY(-2px);
 }
 

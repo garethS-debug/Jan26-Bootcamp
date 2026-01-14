@@ -3,10 +3,22 @@
   const toggle = document.querySelector('.toggle-control input[type="checkbox"]');
 
   function applyTheme(name){
-    if(name === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
-    else document.documentElement.removeAttribute('data-theme');
+    const isDark = name === 'dark';
+    if (isDark) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+    if (logo) {
+      logo.src = isDark ? './logo/logo_500px_dm.svg' : './logo/logo_500px.svg';
+    }
+    if (homepage_pidgeon) {
+homepage_pidgeon.src = isDark ? './img/pidgeon-dark.png' : './img/pidgeon.png';
+}
   }
 
+  
+  const logo = document.querySelector('.logo-img');
   const saved = localStorage.getItem(KEY);
   // default to light if nothing saved
   const start = saved || 'light';
