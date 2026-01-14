@@ -6,13 +6,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/style.css">
+        <script src="js/theme-toggle.js" defer></script>
         <title>About Page</title>
     </head>
 
 
     <header>
-    <!-- - **Header**: Include your name and a navigation bar 
-    (e.g., "About", "Projects", "Contact"). -->
+        <!--Dark Mode Toggle-->
+        <label class="toggle-control">
+        <input type="checkbox">
+        <span class="control"></span>
+        </label>
+         <!--Dark Mode Toggle-->
+
     <nav >
             <img src="./logo/logo_500px.svg" alt="Gareth Swarte Logo" class="logo-img">
             <!-- Navigation links -->
@@ -50,7 +56,7 @@
         <section id="projects" class="projects">
             <!-- link to projects button -->
         
-     <button class="btn liquid">
+     <button class="btn liquid" onclick="location.href='./projects.html'">
     <span>See Projects</span>
     </button>
 
