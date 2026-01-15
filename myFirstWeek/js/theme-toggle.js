@@ -19,6 +19,7 @@ homepage_pidgeon.src = isDark ? './img/pidgeon-dark.png' : './img/pidgeon.png';
 
   
   const logo = document.querySelector('.logo-img');
+  const homepage_pidgeon = document.querySelector('#homepage_pidgeon');
   const saved = localStorage.getItem(KEY);
   // default to light if nothing saved
   const start = saved || 'light';
