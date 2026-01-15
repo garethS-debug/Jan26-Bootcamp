@@ -13,7 +13,7 @@
       logo.src = isDark ? './logo/logo_500px_dm.svg' : './logo/logo_500px.svg';
     }
     if (homepage_pidgeon) {
-homepage_pidgeon.src = isDark ? './img/pidgeon-dark.png' : './img/pidgeon.png';
+homepage_pidgeon.src = isDark ? './img/pidgeon-dark.png' : './img/Pidgeon.png';
 }
   }
 
